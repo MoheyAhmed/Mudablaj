@@ -157,6 +157,10 @@ function wait(){
     alert ("Your Registration Done : Good Work ");
 }
 
+function login_wel(){
+    alert ("Good Login successful!");
+}
+
 
 // User database
 // let users = [];
