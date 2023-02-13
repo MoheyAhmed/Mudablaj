@@ -1,85 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="images/voice.jpg" type="image/x-icon">
-  <title>Mudablaj</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <link rel="shortcut icon" href="images/voice.jpg" type="image/x-icon">
+    <title>Mudablaj</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body id="body">
+<body class="back_body">
 
-  <!-- =================navbar section===================== -->
-  <div class="nav_bar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light first_nav">
 
-      <a style="margin-left:0px;" class="navbar-brand" href="#"><img src="images/7.jpeg" alt="betaqa_logo" style="width: 75px; border-radius: 50%;"> </a>
-      <h2 class="logo_title">Mudablaj</h2>
-
-      <ul class="navbar-nav ml-auto">
-          
-        <li id="mode" class="nav-item">
-          <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.5 0.614594C15.0351 0.614594 15.4688 1.04832 15.4688 1.58334V2.87501C15.4688 3.41004 15.0351 3.84376 14.5 3.84376C13.965 3.84376 13.5313 3.41004 13.5313 2.87501V1.58334C13.5313 1.04832 13.965 0.614594 14.5 0.614594Z" fill="#6D6D6D"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.07296 14.5C7.07296 10.3981 10.3982 7.07293 14.5 7.07293C18.6019 7.07293 21.9271 10.3981 21.9271 14.5C21.9271 18.6019 18.6019 21.9271 14.5 21.9271C10.3982 21.9271 7.07296 18.6019 7.07296 14.5ZM14.5 9.01043C11.4682 9.01043 9.01046 11.4682 9.01046 14.5C9.01046 17.5318 11.4682 19.9896 14.5 19.9896C17.5319 19.9896 19.9896 17.5318 19.9896 14.5C19.9896 11.4682 17.5319 9.01043 14.5 9.01043Z" fill="#6D6D6D"/>
-              <path d="M6.05161 4.68157C5.67329 4.30325 5.05991 4.30325 4.68159 4.68157C4.30327 5.05989 4.30327 5.67327 4.68159 6.05159L5.59493 6.96493C5.97325 7.34325 6.58663 7.34325 6.96495 6.96493C7.34327 6.58661 7.34327 5.97323 6.96495 5.59491L6.05161 4.68157Z" fill="#6D6D6D"/>
-              <path d="M28.3855 14.5C28.3855 15.035 27.9517 15.4688 27.4167 15.4688H26.125C25.59 15.4688 25.1563 15.035 25.1563 14.5C25.1563 13.965 25.59 13.5313 26.125 13.5313H27.4167C27.9517 13.5313 28.3855 13.965 28.3855 14.5Z" fill="#6D6D6D"/>
-              <path d="M24.3185 6.05158C24.6968 5.67326 24.6968 5.05988 24.3185 4.68156C23.9402 4.30324 23.3268 4.30324 22.9485 4.68156L22.0351 5.5949C21.6568 5.97322 21.6568 6.5866 22.0351 6.96492C22.4134 7.34324 23.0268 7.34324 23.4051 6.96492L24.3185 6.05158Z" fill="#6D6D6D"/>
-              <path d="M14.5 25.1563C15.0351 25.1563 15.4688 25.59 15.4688 26.125V27.4167C15.4688 27.9517 15.0351 28.3854 14.5 28.3854C13.965 28.3854 13.5313 27.9517 13.5313 27.4167V26.125C13.5313 25.59 13.965 25.1563 14.5 25.1563Z" fill="#6D6D6D"/>
-              <path d="M23.4052 22.0351C23.0269 21.6568 22.4135 21.6568 22.0352 22.0351C21.6569 22.4134 21.6569 23.0268 22.0352 23.4051L22.9486 24.3185C23.3269 24.6968 23.9402 24.6968 24.3186 24.3185C24.6969 23.9402 24.6969 23.3268 24.3186 22.9485L23.4052 22.0351Z" fill="#6D6D6D"/>
-              <path d="M3.84379 14.5C3.84379 15.035 3.41007 15.4688 2.87504 15.4688H1.58337C1.04835 15.4688 0.614624 15.035 0.614624 14.5C0.614624 13.965 1.04835 13.5313 1.58337 13.5313H2.87504C3.41007 13.5313 3.84379 13.965 3.84379 14.5Z" fill="#6D6D6D"/>
-              <path d="M6.96487 23.4051C7.34319 23.0268 7.34319 22.4134 6.96487 22.0351C6.58655 21.6568 5.97317 21.6568 5.59485 22.0351L4.6815 22.9484C4.30318 23.3268 4.30318 23.9401 4.6815 24.3185C5.05982 24.6968 5.6732 24.6968 6.05152 24.3185L6.96487 23.4051Z" fill="#6D6D6D"/>
-          </svg>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <!-- =============== end navbar ==================== -->
-  
-  
-  <!-- =============== start header ==================== -->
-  <header>
-    <div class="head container">
-      <div class="row">
-        <div id="left" class="col-md-6">
-          <div class="left">
-            <h3>Learning Is About To Get Easier</h3>
-            <p>Upload Your Video Through YouTube link <br> or Browse Your Local Files</p>
-            <button class="btn btn-secondary" id="addVideosBtn" >Add Videos <i class="fa fa-camera"></i> </button>
-            <button class="btn btn-secondary ml-2" id="addlinkBtn" >Add link <i class="fas fa-link"></i> </button>
-            
-            <div class="adding_video" id="adding_video">
-              <form action="content.html" method="GET">
-                <input type="file" class=" btn btn-primary" id="customFile" name="addvideo" value="" required />
-                <button class="btn btn-secondary" id="" name="button" value="Click" onClick="AddVideo(this.form)">Add Videos <i class="fa fa-camera"></i> </button>
-              </form>
+    <div class="login text-center"  id="logining">
+        <div class="container">
+            <div class="frame bg-white mt-5">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="image">
+                            <img src="images/login.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-5">
+                        <div class="logining">
+                            <div class="content">
+                                <h2>Hello, <br>Welcome back</h2>
+                                <form action="intro.html" id="login-form">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Your Email" id="username exampleInputEmail1" aria-describedby="emailHelp" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control mt-4" placeholder="Your Password" id="password exampleInputPassword1" required>
+                                    </div>
+                                    <div class="form-group form-check text-left">
+                                        <div class="d-flex justify-content-center mt-4">
+                                            <label class="form-check-label" for=""><a href="#">Forgot Password?</a></label>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-block mb-4 mt-4">Login</button>
+    
+                                    <label for=""> Don't have an account? <a href="#" id="to_register">Click here</a> </label>
+                                </form>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
             </div>
-
-            <div class="adding_link" id="adding_link">
-              <form action="content.html" method="GET">
-                <input type="url" id="dub_link link" placeholder="Paste Your Youtube Link" class="" name="addlink" value="" required>
-                <button class="btn btn-secondary" id="" name="button" value="Click" onClick="Add_Link()">Add links <i class="fa fa-link"></i> </button>
-              </form>
-            </div>
-          </div>
         </div>
-        <div id="right" class="col-md-6 mt-4">
-          <div class="right">
-            <img id="img_round" src="images/voice.jpg" alt="header_img" >
-          </div>
-        </div>
-      </div>
     </div>
-  </header>
-  <!-- =============== end header ==================== -->
+
+
+
+
+
+    <div class="login text-center register" id="register">
+        <div class="container">
+            <div class="frame bg-white mt-5">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="image">
+                            <img src="images/login.png" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-12 col-lg-5" >
+                        <div>
+                            <div class="content">
+                                <h2>Welcome Let's Register</h2>
+                                <form action="" id="register-form">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Enter Your User Name" id="username exampleInputText1" aria-describedby="emailHelp" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="email" class="form-control mt-4" placeholder="Enter Your Email" id="email exampleInputEmail1" aria-describedby="emailHelp" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="password" class="form-control mt-4" placeholder="Enter Your Password" id="password exampleInputPassword1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+                                        <!-- <div id="gSignInWrapper">
+                                            <span class="label">Sign in with:</span>
+                                            <div id="customBtn" class="customGPlusSignIn">
+                                              <span class="icon"></span>
+                                              <span class="buttonText">Google</span>
+                                            </div>
+                                        </div>
+                                        <div id="name"></div>
+                                        <script>startApp();</script> -->
+                                        <a href="intro.html" style="text-decoration: none;"><div id="my-signin2" class="d-flex justify-content-center mt-4"></div></a>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-block mt-4" onclick="wait()" id="to_login">SIGN-UP</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
 
-  <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/index.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

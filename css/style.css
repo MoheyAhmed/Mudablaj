@@ -20,6 +20,109 @@
     background-image: radial-gradient(#0C75C0, #19232b) !important;
     /* background-image: radial-gradient(#001c31, #091f31) !important; */
 }
+
+.back_body{
+    background-image: url("../images/back3.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    /* height: 100vh; */
+}
+
+.register{
+    display: none;
+}
+
+.frame {
+    /* margin-left: rem; */
+    margin-top: 4rem !important;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 25px !important;
+    margin-bottom: 3.2rem;
+}
+.frame img{
+    border-radius: 25px!important;
+    width: 100%;
+}
+
+.login .frame .content{
+    padding: 2rem;
+    padding-left: 4rem;
+    padding-top: 4rem;
+}
+
+.login .frame button{
+    border-radius: 25px !important;
+    font-weight: bold;
+}
+
+
+
+.login .frame .content h2{
+    font-weight: bold;
+}
+
+.login .frame .content form{
+    margin-top: 3rem;
+    font-weight: 600;
+    color: #331075f8;
+}
+
+.login .frame .content input{
+   /* border: none; */
+   padding: 1.5rem;
+   height: 45px;
+   border: 2px solid #eee;
+   border-radius: 30px;
+}
+
+.login .frame .content input::placeholder{
+    color: #a5a5a5 !important;
+    font-weight: 500;
+}
+
+.login .frame .content .labels{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media(min-width: 1150px){
+    .frame{
+        margin-top: 2.5rem !important;
+    }
+    
+}
+
+@media(max-width: 1135px){
+    .frame{
+        margin-bottom: 3rem;
+    }
+    
+}
+
+@media(max-width: 991px){
+    .back_body{
+        overflow-y: unset;
+    }
+    
+}
+@media(max-width: 800px){
+    .frame {
+        margin-top: 2rem !important;
+        padding: 0rem;
+    }
+    .login .frame .content{
+        padding: 2rem;
+        padding-left: 1.5rem;
+        padding-top: 2rem;
+    }
+    
+}
+
+
 .first_nav{
     background-color: #ffffff10 !important;
     backdrop-filter:blur(12px);

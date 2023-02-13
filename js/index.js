@@ -74,3 +74,118 @@ function Add_Link () {
 // $("#options").click(function(){
 //     $("#dub_iframe").attr("src","https://www.youtube.com/embed/");
 // });
+
+
+
+// function onSignIn(googleUser) {
+//     var profile = googleUser.getBasicProfile();
+//     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+//     console.log('Name: ' + profile.getName());
+//     console.log('Image URL: ' + profile.getImageUrl());
+//     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+// }
+
+
+$("#to_register").click(function (e) { 
+    e.preventDefault();
+    $("#register").show(3000);
+    $("#logining").hide(1000);
+})
+
+// $('#to_login').click(function(){
+//     setTimeout(function(){
+//         location.reload();
+//     }, 5000);
+// });
+
+// function toregister(){
+//     $("#logining").show(1000);
+//     $("#register").hide();
+// }
+
+// $("#to_login").click(function (e) { 
+//     e.preventDefault();
+//     $("#logining").show(3000);
+//     $("#register").hide(1000);
+// })
+
+function onSuccess(googleUser) {
+    console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+  }
+  function onFailure(error) {
+    console.log(error);
+  }
+  function renderButton() {
+    gapi.signin2.render('my-signin2', {
+      'scope': 'profile email',
+      'width': 240,
+      'height': 50,
+      'longtitle': true,
+      'theme': 'dark',
+      'onsuccess': onSuccess,
+      'onfailure': onFailure
+    });
+}
+
+// var googleUser = {};
+// var startApp = function() {
+// gapi.load('auth2', function(){
+//     // Retrieve the singleton for the GoogleAuth library and set up the client.
+//     auth2 = gapi.auth2.init({
+//     client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+//     cookiepolicy: 'single_host_origin',
+//     // Request scopes in addition to 'profile' and 'email'
+//     //scope: 'additional_scope'
+//     });
+//     attachSignin(document.getElementById('customBtn'));
+// });
+// };
+
+// function attachSignin(element) {
+// console.log(element.id);
+// auth2.attachClickHandler(element, {},
+//     function(googleUser) {
+//         document.getElementById('name').innerText = "Signed in: " +
+//             googleUser.getBasicProfile().getName();
+//     }, function(error) {
+//         alert(JSON.stringify(error, undefined, 2));
+//     });
+// }
+
+
+function wait(){
+    alert ("Your Registration Done : Good Work ");
+}
+
+
+// User database
+// let users = [];
+
+// // Login form submit event listener
+// ("#login-form").addEventListener("submit", function(event) {
+//     let username = document.querySelector("#username").value;
+//     let password = document.querySelector("#password").value;
+//     // Check if the user exists in the database
+//     let user = users.find(user => user.username === username && user.password === password);
+//     if (user) {
+//         alert("Login successful!");
+//     } else {
+//         alert("Login failed. Incorrect username or password.");
+//     }
+// });
+
+// // Register form submit event listener
+// ("#register-form").addEventListener("submit", function(event) {
+//     let username = document.querySelector("#username").value;
+//     let email = document.querySelector("#email").value;
+//     let password = document.querySelector("#password").value;
+//     // Check if the username already exists
+//     let existingUser = users.find(user => user.username === username);
+//     if (existingUser) {
+//         alert("Username already exists. Please choose a different username.");
+//     } else {
+//         // Add the new user to the database
+//         users.push({ username, email, password });
+//         alert("Registration successful!");
+//     }
+// });
